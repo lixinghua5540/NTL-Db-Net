@@ -5,7 +5,7 @@ import torch
 from data_code.base_dataset import BaseDataset
 from data_code.image_folder import make_dataset, make_test_dataset
 from PIL import Image
-
+ 
 
 class CreatContentDataset(BaseDataset):
     def __init__(self, opt):
