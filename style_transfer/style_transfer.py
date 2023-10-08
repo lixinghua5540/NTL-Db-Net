@@ -18,13 +18,11 @@ def get_style_model_and_losses(opt, cnn, style_dataset, content_img, style_weigh
     cnn = copy.deepcopy(cnn)
     use_cuda = torch.cuda.is_available() and opt.cuda
 
-    # just in order to have an iterable access to or list of content/syle
-    # losses
     content_losses = []#内容损失
     style_losses = []#风格损失
 
-    model = nn.Sequential()  # the new Sequential module network新的顺序模块网络
-    gram = GramMatrix()  # we need a gram module in order to compute style targets我们需要一个gram模块来计算样式目标
+    model = nn.Sequential()
+    gram = GramMatrix()
 
     # move these modules to the GPU if possible:
     if use_cuda:
@@ -34,7 +32,7 @@ def get_style_model_and_losses(opt, cnn, style_dataset, content_img, style_weigh
 
     i = 1
     for layer in list(cnn):
-        if isinstance(layer, nn.Conv2d):#判断layer是否为nn.Conv2d
+        if isinstance(layer, nn.Conv2d):
             name = "conv_" + str(i)
             model.add_module(name, layer)
             if name in content_layers:
@@ -158,7 +156,7 @@ def run_style_transfer(opt, cnn, style_dataset, content_img, num_steps=300, styl
 
             run[0] += 1
             if run[0] == opt.epoch:
-                print('风格损失(Style Loss): {:4f}  内容损失(Content Loss): {:4f}'.format(style_score.item(), content_score.item()))
+                print('Style Loss: {:4f}  Content Loss: {:4f}'.format(style_score.item(), content_score.item()))
 
             return style_score + content_score
 
