@@ -1,7 +1,7 @@
 # NTL-Db-Net
 
 Title: ***Making the Earth Clear at Night: A High-resolution Nighttime Light Image Deblooming Network***[[paper]](https://ieeexplore.ieee.org/document/10266374)
-
+X. Bai, X. Li, J. Miao and H. Shen, "Making the Earth Clear at Night: A High-Resolution Nighttime Light Image Deblooming Network," in IEEE Transactions on Geoscience and Remote Sensing, vol. 61, pp. 1-13, 2023, Art no. 5621913, doi: 10.1109/TGRS.2023.3320192.
 <br>
 <br>
 
