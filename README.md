@@ -1,6 +1,6 @@
 # NTL-Db-Net
 
-Title: ***Making the Earth Clear at Night: A High-resolution Nighttime Light Image Deblooming Network***
+Title: ***Making the Earth Clear at Night: A High-resolution Nighttime Light Image Deblooming Network***[[paper]](https://ieeexplore.ieee.org/document/10266374)
 
 <br>
 <br>
